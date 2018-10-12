@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 namespace _2018_10_12_LIst泛型集合之用户管理系统
 {
     /// <summary>
-    /// V(View)视图层-和用户进行交互
+    /// C((Controller)控制器层-用于处理逻辑
     /// </summary>
-    class Program
+    class UserController
     {
-        static void Main(string[] args)
-        {
+        //实例一个User集合
+        private List<User> user = new List<User>();
 
-        }
+        
     }
 }
