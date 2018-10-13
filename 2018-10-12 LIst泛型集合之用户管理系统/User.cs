@@ -10,13 +10,15 @@ namespace _2018_10_12_LIst泛型集合之用户管理系统
     {
         public enum Sex
         {
-            男,
-            女
+            男=1,
+            女=2
         }
 
+        
         private string name;
         private int age;
         private string address;
+
 
         public string Name { get => name; set => name = value;}
         public int Age { get => age;set => age = value;}
@@ -28,6 +30,7 @@ namespace _2018_10_12_LIst泛型集合之用户管理系统
 
         public User(string name, int age, Sex sex, string address)
         {
+            
             this.name = name;
             this.age = age;
             this.sex = sex;
@@ -36,7 +39,7 @@ namespace _2018_10_12_LIst泛型集合之用户管理系统
 
         public override string ToString()
         {
-            return string.Format($"{name}|{age}|{sex}|{address}");
+            return string.Format($" {name}  | {age}   | {sex}   | {address}\n");
         }
 
     }
