@@ -57,12 +57,44 @@ namespace _2018_10_12_LIst泛型集合之用户管理系统
 
                         break;
                     case "2":
+                        uc.FindUser(0);
+                        Console.WriteLine("请输入需要删除的用户ID：");
+                        int id = int.Parse(Console.ReadLine());
+                        uc.RemoveUser(id);
                         break;
                     case "3":
                         uc.FindUser(0);
-                        Console.WriteLine("请输入需要删除的用户ID：");
-                        int id=int.Parse(Console.ReadLine());
-                        uc.RemoveUser(id);
+                        Console.WriteLine("请输入需要修改的用户ID：");
+                        int _id = int.Parse(Console.ReadLine());
+
+                        Console.Write("请输入修改后的姓名：");
+                        string Cname = Console.ReadLine();
+                        Console.Write("请输入修改后年龄：");
+                        int Cage = int.Parse(Console.ReadLine());
+                        Console.Write("请选择性别：1.男   2.女");
+                        int Csex = int.Parse(Console.ReadLine());
+                        User.Sex _Csex = User.Sex.男;
+
+                        switch (Csex)
+                        {
+                            case 1:
+
+                                _Csex = User.Sex.男;
+                                break;
+                            case 2:
+                                _Csex = User.Sex.女;
+                                break;
+                            default:
+                                Console.WriteLine("输入错误请重新输入");
+                                break;
+
+                        }
+
+                        Console.Write("请输入新地址：");
+                        string Caddress = Console.ReadLine();
+
+
+                        uc.ChangeUser(_id,Cname,Cage,_Csex,Caddress);
 
                         break;
                     case "4":

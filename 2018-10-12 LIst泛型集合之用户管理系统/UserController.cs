@@ -36,8 +36,12 @@ namespace _2018_10_12_LIst泛型集合之用户管理系统
         /// <summary>
         /// 修改用户
         /// </summary>
-        public void ChangeUser()
+        public void ChangeUser(int index, string name, int age, User.Sex sex, string adrress)
         {
+            ListUser[index].Name = name;
+            ListUser[index].Age = age;
+            ListUser[index].sex = sex;
+            ListUser[index].Address = adrress;
 
         }
 
